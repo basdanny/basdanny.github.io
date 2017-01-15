@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>basdanny @basdanny</title>
+	<meta name="description" content="{description}">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="https://use.fontawesome.com/d72619196d.js"></script>
+</head>
+	<body>
+		<header>
+			<h1>@basdanny</h1>
+			<p>
+				{{Summary}}<br>
+				{{Experience}}<br>
+				{{Languages}}<br>
+				{{Something smart and funny about myself}}<br>
+				{{me, me, me...me again}}<br>
+			</p>
+			<a href="https://www.linkedin.com/in/dannybaskin">
+				<i class="fa fa-linkedin-square" aria-hidden="true"> linkedin</i>
+			</a>
+		</header>
+
+		<div class="main">
+			<h2>gist</h2>
+			<div class="gist">
+				<i class="fa fa-spinner fa-spin fa-fw"></i>
+				<ul jput="gist">					
+					<li>{{new Date(json.created_at).toString()}}</li>
+					<li><a href="{{json.html_url}}">{{json.url}}</a></li>
+					<li>&nbsp;</li>
+				</ul> 
+			</div>
+			
+			<h5 class="somethingtoread">something to read...</h5>
+			<div class="stackoverflow hide">
+				<h3>stackoverflow questions</h3>
+				<ul class="onelinelist">
+					<li class="filter">javascript</li><li>|</li> 
+					<li class="filter">css</li><li>|</li>
+					<li class="filter">html</li><li>|</li>
+					<li class="filter">jquery</li><li>|</li>
+					<li class="filter">angularjs</li><li>|</li>
+					<li class="filter">c#</li><li>|</li>
+					<li class="filter">.net</li><li>|</li>
+					<li class="filter">sql</li><li>|</li>
+					<li class="filter">security</li>
+				</ul>
+				<div>					
+					<i class="fa fa-spinner fa-spin fa-fw"></i>
+					<ul jput="stackoverflow">
+						<li>{{var d = new Date(0); d.setUTCSeconds(json.last_activity_date); d.toISOString().slice(0,10);}}</li>
+						<li>{{json.title}}</li>
+						<li><a href="{{json.link}}">{{json.link}}</a></li>
+						<li>&nbsp;</li>
+					</ul> 
+				</div>
+			</div>
+		
+		</div> <!-- main -->
+		
+		<footer>
+			<p>Copyright ©  2017</p>
+		</footer>
+		
+		<script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="js/jput-2.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>
