@@ -45,6 +45,7 @@ ul {
 a:hover, a:visited, a:link, a:active {
     color: #8CDCFE;     
     text-decoration: none;
+    word-wrap: break-word;
 }
 
 ul.onelinelist li {
