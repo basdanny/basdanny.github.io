@@ -15,7 +15,7 @@
         $("li.filter").click(function() {
            jPut.stackoverflow.data = [];
             $(".stackoverflow .fa-spin").show();
-            $.get("https://api.stackexchange.com//2.2/search?order=desc&sort=votes&tagged="+encodeURIComponent($(this).text())+"&site=stackoverflow", function(data) {            
+            $.get("https://api.stackexchange.com/2.2/search?order=desc&sort=votes&tagged="+encodeURIComponent($(this).text())+"&site=stackoverflow", function(data) {            
                 jPut.stackoverflow.data = data.items;
                 $(".stackoverflow .fa-spin").hide();
             });
