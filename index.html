@@ -30,7 +30,7 @@
 	<div class="main">
 		<h4 class="gists-header clickable">gists...:$<span class="cursor">|</span></h4>
 		<div class="gists hide">
-			<i class="fa fa-spinner fa-spin fa-fw"></i>
+			<div class="spinner hide"><i class="fa fa-spinner fa-spin fa-fw"></i></div>
 			<ul jput="gist">
 				<li>{{new Date(json.created_at).toString()}}</li>
 				<li><a href="{{json.html_url}}">{{json.url}}</a></li>
@@ -67,7 +67,7 @@
 				<li class="filter">security</li>
 			</ul>
 			<div>
-				<i class="fa fa-spinner fa-spin fa-fw"></i>
+				<div class="spinner hide"><i class="fa fa-spinner fa-spin fa-fw"></i></div>
 				<ul jput="stackoverflow">
 					<li>{{var d = new Date(0); d.setUTCSeconds(json.last_activity_date); d.toISOString().slice(0,10);}}</li>
 					<li>{{json.title}}</li>
