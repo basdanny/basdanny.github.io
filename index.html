@@ -28,8 +28,8 @@
 	</header>
 
 	<div class="main">
-		<h2>gist</h2>
-		<div class="gist">
+		<h4 class="gists-header clickable">gists...:$<span class="cursor">|</span></h4>
+		<div class="gists hide">
 			<i class="fa fa-spinner fa-spin fa-fw"></i>
 			<ul jput="gist">
 				<li>{{new Date(json.created_at).toString()}}</li>
@@ -38,7 +38,7 @@
 			</ul>
 		</div>
 
-		<h5 class="somequestions">some questions...:$<span class="cursor">|</span></h5>
+		<h4 class="somequestions-header clickable">some questions...:$<span class="cursor">|</span></h4>
 		<div class="stackoverflow hide">
 			<h3>stackoverflow questions</h3>
 			<ul class="onelinelist">

@@ -49,6 +49,7 @@ footer {
 .hide {
     display: none;
 }
+
 ul {
   list-style-type: none;
 }
@@ -80,14 +81,17 @@ ul.onelinelist li {
     cursor: hand;
 }
 
-.somequestions {
-    margin-top: 150px;
-    cursor: pointer; 
-    cursor: hand;
+.somequestions-header {
+    margin-top: 150px;    
 }
 
 .stackoverflow div {
     margin-top:  15px;
+}
+
+.clickable {
+    cursor: pointer; 
+    cursor: hand;
 }
 
 .cursor {

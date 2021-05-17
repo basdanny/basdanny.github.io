@@ -1,14 +1,24 @@
 (function ($) {
     $(document).ready(function () {
 
-        $.get("https://api.github.com/users/basdanny/gists", function (data) {
-            jPut.gist.data = data;
-            $(".gist .fa-spin").hide();
+        $(".fa-spin").hide();
+
+
+        $(".gists-header").click(function () {
+            $(".gists").toggle(function () {
+                if ($(".gists").is(":visible") && $.isEmptyObject(jPut.gist.data)) {
+                    $(".gists .fa-spin").show();
+                    $.get("https://api.github.com/users/basdanny/gists", function (data) {
+                        jPut.gist.data = data.slice(0, 3);
+                        $(".gists .fa-spin").hide();
+                    });
+                    $(".gists .fa-spin").hide();
+                }
+            });
         });
 
-        $(".stackoverflow .fa-spin").hide();
 
-        $(".somequestions").click(function () {
+        $(".somequestions-header").click(function () {
             $(".stackoverflow").toggle();
         });
 
